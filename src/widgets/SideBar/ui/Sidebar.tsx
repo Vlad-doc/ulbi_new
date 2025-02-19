@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { useState } from "react";
 
-import cls from './Sidebar.module.scss';
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
-import { LangSwitcher } from 'shared/ui/LangSwitcher';
+import { classNames } from "shared/lib/classNames/classNames";
+import { LangSwitcher } from "shared/ui/LangSwitcher";
+import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
+
+import cls from "./Sidebar.module.scss";
 
 export const Sidebar = () => {
     const [collapsed, setCollapsed] = useState(false);
