@@ -7,7 +7,9 @@
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack  --env mode=production",
     "lint": "eslint . --config=eslint.config.mjs",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "lint:scss": "npx stylelint **/*.scss",
+    "lint:scss:fix": "npx stylelint **/*.scss --fix"
   },
   "keywords": [],
   "author": "",
