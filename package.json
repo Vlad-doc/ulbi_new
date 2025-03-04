@@ -10,7 +10,7 @@
     "lint:fix": "npm run lint -- --fix",
     "lint:scss": "npx stylelint **/*.scss",
     "lint:scss:fix": "npx stylelint **/*.scss --fix",
-    "test": "jest"
+    "unit": "jest --config config/jest/jest.config.ts"
   },
   "keywords": [],
   "author": "",
@@ -35,7 +35,7 @@
     "file-loader": "^6.2.0",
     "globals": "^15.15.0",
     "html-webpack-plugin": "^5.5.0",
-    "jest": "^29.7.0",
+    "jest": "^27.5.1",
     "mini-css-extract-plugin": "^2.5.3",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
