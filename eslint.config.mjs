@@ -21,6 +21,16 @@ export default [
     ],
   },
   {
+    overrides: [
+      {
+        files: ["tests/**/*"],
+        env: {
+          jest: true,
+        },
+      },
+    ],
+  },
+  {
     settings: {
       react: {
         version: "detect",

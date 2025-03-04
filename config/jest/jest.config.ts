@@ -29,6 +29,14 @@ const config = {
   testEnvironment: "jsdom",
 
   modulePaths: ["<rootDir>src"],
+
+  moduleNameMapper: {
+    '\\.(css|scss)$': 'identity-obj-proxy'
+  },
+
+  "setupFilesAfterEnv": [
+    "<rootDir>config/jest/setupTests.ts"
+  ]
 };
 
 export default config;
