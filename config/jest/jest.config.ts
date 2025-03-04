@@ -31,7 +31,8 @@ const config = {
   modulePaths: ["<rootDir>src"],
 
   moduleNameMapper: {
-    '\\.(css|scss)$': 'identity-obj-proxy'
+    '\\.(css|scss)$': 'identity-obj-proxy',
+    '\\.svg$': '<rootDir>config/jest/svgMock.tsx',
   },
 
   "setupFilesAfterEnv": [

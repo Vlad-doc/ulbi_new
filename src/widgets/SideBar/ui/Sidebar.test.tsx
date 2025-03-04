@@ -5,6 +5,6 @@ describe("Sideba", () => {
     test("render", () => {
         render(<Sidebar />);
 
-        expect(screen.getByText("TEST")).toBeInTheDocument();
+        expect(screen.getByTestId("sidebar")).toBeInTheDocument();
     });
 });
