@@ -1,10 +1,21 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
+import { renderWithTranslation } from "shared/lib/renderWithTranslation/renderWithTranslation";
 import { Sidebar } from "widgets/Sidebar";
 
-describe("Sideba", () => {
+describe("Sidebar", () => {
     test("render", () => {
-        render(<Sidebar />);
+        renderWithTranslation(<Sidebar />);
 
         expect(screen.getByTestId("sidebar")).toBeInTheDocument();
+    });
+
+    test("click", () => {
+        renderWithTranslation(<Sidebar />);
+
+        const button = screen.getByTestId("sidebar-toggle");
+
+        fireEvent.click(button);
+
+        expect(screen.getByTestId("sidebar")).toHaveClass('collapsed');
     });
 });
