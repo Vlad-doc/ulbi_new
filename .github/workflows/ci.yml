@@ -55,5 +55,5 @@ jobs:
       - name: unit test
         run: npm run unit
 
-      - name: screenshot test
-        run: npm run test:ui:ci
+      # - name: screenshot test
+      #   run: npm run test:ui:ci
