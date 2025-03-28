@@ -2,6 +2,7 @@ import pluginJs from "@eslint/js";
 import importPlugin from "eslint-plugin-import";
 import pluginReact from "eslint-plugin-react";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
+import reactHooksPlugin from "eslint-plugin-react-hooks";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 /** @type {import('eslint').Linter.Config[]} */
@@ -38,13 +39,20 @@ export default [
   {
     plugins: {
       import: importPlugin,
+      "react-hooks": reactHooksPlugin,
     },
     rules: {
       ...reactRecommended.rules,
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "error",
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
       "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": ["warn", {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        caughtErrorsIgnorePattern: "^_",
+      }],
       "import/order": [
         "error",
         {
